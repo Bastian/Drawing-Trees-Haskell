@@ -50,7 +50,7 @@ fit _          _          = 0
 -- fitlistl [[(1,1),(0,2),(0,3)], [(1,1),(0,2),(0,3)], [(1,1),(0,2),(0,3)]]
 -- > [0.0,4.0,8.0]
 fitlistl :: [Extent] -> [Float]
-fitlistl es = fitlistl' [] es
+fitlistl = fitlistl' []
   where
     fitlistl' :: Extent -> [Extent] -> [Float]
     fitlistl' acc [] = []
