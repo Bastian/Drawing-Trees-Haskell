@@ -77,7 +77,7 @@ fitlist es = map mean $ zip (fitlistl es) (fitlistr es)
 
 -- Designs a positioned tree for the given tree
 design :: Tree a -> PositionedTree a
-design tree = fst $ design' tree
+design = fst . design'
   where
     -- Auxiliary function to prevent unnecessary recalculations of the extent
     design' (Node label subtrees) = (resulttree, resultextent)
